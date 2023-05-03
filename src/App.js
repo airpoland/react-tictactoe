@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import styles from './App.module.css';
+import Card from './Components/UI/Card';
+import Board from './Components/Board/Board';
+import { useState } from 'react';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const [board, setBoard] = useState(new Array(9).fill(''));
+
+	return (
+		<div className={styles.container}>
+			<div className={styles['app-container']}>
+				<Card className={'header'}>Tic Tac Toe</Card>
+				<Card className={'game-container'}>
+					<Board boardState={board}></Board>
+				</Card>
+				<Card className={'history-container'}>Go back to move</Card>
+			</div>
+		</div>
+	);
 }
 
 export default App;
