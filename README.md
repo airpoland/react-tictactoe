@@ -1,3 +1,4 @@
+https://coolors.co/7f7eff-cfffb3-e05263-fcec52-210b2c
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
